@@ -1,6 +1,6 @@
 # Cream Saver — ComfyUI 커스텀 노드
 
-감정 에셋 일괄 생성 툴킷의 ComfyUI용 컴포넌트입니다. 이미지를 WebP 형식으로 저장할 때 편집용 워크플로우를 파일의 메타데이터(EXIF)에 함께 보관합니다. 이렇게 저장된 이미지를 ComfyUI 캔버스로 드래그앤드랍하면, 해당 이미지를 바로 편집할 수 있도록 기존 워크플로우(`Sampler_workflow.json` 기반)가 자동으로 복원됩니다.
+감정 에셋 일괄 생성 툴킷에 포함된 ComfyUI 커스텀 노드입니다. 이미지를 WebP 형식으로 저장할 때 편집용 워크플로우를 파일의 메타데이터(EXIF)에 함께 보관합니다. 이렇게 저장된 이미지를 ComfyUI 캔버스로 드래그앤드랍하면, 해당 이미지를 바로 편집할 수 있도록 기존 워크플로우(`Sampler_workflow.json` 기반)가 자동으로 복원됩니다.
 
 > 감정 에셋 일괄 생성 워크플로우를 생성하려면 같은 저장소의 [`emotion-workflow-builder`](../emotion-workflow-builder/) skill을 사용합니다.
 

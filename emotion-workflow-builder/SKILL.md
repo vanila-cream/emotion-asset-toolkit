@@ -162,4 +162,4 @@ execFileSync('node',
 
 - `lib/nai-to-sd.js`, `lib/generate_workflow.js`, `lib/workflow_prototype.json` — 검증된 자산
 - 사용자 측 데이터 파일 — 명시 요청 없이는 손대지 않음
-- 자매 컴포넌트(`cream-saver/`의 `nodes.py`, `Sampler_workflow.json`) 등 skill 외부 영역
+- 자매 커스텀 노드(`cream-saver/`의 `nodes.py`, `Sampler_workflow.json`) 등 skill 외부 영역

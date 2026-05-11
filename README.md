@@ -1,15 +1,15 @@
 # Emotion Asset Toolkit
 
-ComfyUI에서 감정 에셋을 일괄 생성하기 위한 도구 모음입니다. 두 개의 독립적인 컴포넌트로 구성되며, 각각 독립적인 환경에 설치하여 사용합니다.
+ComfyUI에서 감정 에셋을 일괄 생성하기 위한 도구입니다. ComfyUI 커스텀 노드(`cream-saver`)와 Claude Code 스킬(`emotion-workflow-builder`)로 구성되며, 각각 독립적인 환경에 설치하여 사용합니다.
 
-## 컴포넌트
+## 구성
 
-| 폴더 | 역할 | 설치 위치 |
-|---|---|---|
-| [`cream-saver/`](./cream-saver/) | ComfyUI 커스텀 노드. WebP 메타데이터(EXIF)에 편집용 워크플로우 임베드 + 드래그앤드랍 복원 | `ComfyUI/custom_nodes/` |
-| [`emotion-workflow-builder/`](./emotion-workflow-builder/) | Claude Code skill. NAI/SD 프리셋 → ComfyUI 감정 에셋 생성 워크플로우 JSON 생성 | `~/.claude/skills/` |
+| 폴더 | 종류 | 역할 | 설치 위치 |
+|---|---|---|---|
+| [`cream-saver/`](./cream-saver/) | ComfyUI 커스텀 노드 | WebP 메타데이터(EXIF)에 편집용 워크플로우 임베드 + 드래그앤드랍 복원 | `ComfyUI/custom_nodes/` |
+| [`emotion-workflow-builder/`](./emotion-workflow-builder/) | Claude Code 스킬 | NAI/SD 프리셋 → ComfyUI 감정 에셋 생성 워크플로우 JSON 생성 | `~/.claude/skills/` |
 
-두 컴포넌트는 독립적으로 동작하므로 개별적으로 사용할 수도 있지만, 함께 연계해서 사용하면 다음과 같은 작업 흐름을 구성할 수 있습니다.
+커스텀 노드와 스킬은 독립적으로 동작하므로 개별적으로 사용할 수도 있지만, 함께 연계해서 사용하면 다음과 같은 작업 흐름을 구성할 수 있습니다.
 
 ## 작업 흐름
 
@@ -20,7 +20,7 @@ ComfyUI에서 감정 에셋을 일괄 생성하기 위한 도구 모음입니다
 
 ## 설치
 
-세부 사항은 각 컴포넌트의 README/SKILL 문서를 참고하세요:
+세부 사항은 각 문서를 참고하세요:
 
 - [`cream-saver/README.md`](./cream-saver/README.md) — ComfyUI 노드 + 의존 노드 설치
-- [`emotion-workflow-builder/SKILL.md`](./emotion-workflow-builder/SKILL.md) — skill 발동 조건 및 변환 절차
+- [`emotion-workflow-builder/SKILL.md`](./emotion-workflow-builder/SKILL.md) — 스킬 발동 조건 및 변환 절차
