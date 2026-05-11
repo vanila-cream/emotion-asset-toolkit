@@ -1,6 +1,6 @@
 ---
 name: emotion-workflow-builder
-description: End-to-end pipeline that takes any NAI/SD emotion preset source (HTML viewer, JSON, scene-slot dump, flat array, dict) and produces both a standard preset JSON `{version, name, emotions:[{name, cases:[]}]}` and a ready-to-load ComfyUI batch workflow JSON. Use when the user provides a preset source and wants the full emotion-grid workflow, or when they only want the preset JSON. The skill is source-driven — it preserves whatever emotions and variants the source contains.
+description: End-to-end pipeline that takes any NAI/SD emotion preset source (HTML viewer, JSON, scene-slot dump, flat array, dict) and produces both a standard preset JSON `{version, name, emotions:[{name, cases:[]}]}` and a ready-to-load ComfyUI 감정 에셋 생성 워크플로우 JSON. Use when the user provides a preset source and wants the full 감정 에셋 생성 워크플로우, or when they only want the preset JSON. The skill is source-driven — it preserves whatever emotions and variants the source contains.
 ---
 
 # Emotion Workflow Builder
@@ -8,7 +8,7 @@ description: End-to-end pipeline that takes any NAI/SD emotion preset source (HT
 이 스킬은 다양한 형태의 NAI/SD 감정 프리셋 소스를 받아 두 산출물을 만든다:
 
 1. **표준 프리셋 JSON** (`{version, name, emotions:[{name, cases:[]}]}`)
-2. **ComfyUI 일괄 워크플로우 JSON** (`lib/workflow_prototype.json` 기반)
+2. **ComfyUI 감정 에셋 생성 워크플로우 JSON** (`lib/workflow_prototype.json` 기반)
 
 감정 개수와 케이스 개수는 소스마다 다르므로, 스킬은 **소스에 들어있는 그대로** 변환하는 것이 기본 동작이다.
 
@@ -37,14 +37,14 @@ description: End-to-end pipeline that takes any NAI/SD emotion preset source (HT
 다음 중 하나에 해당하면 이 스킬 사용:
 - 사용자가 새로운 NAI/SD 프리셋 소스(파일/HTML/JSON/dict 등)를 주며 변환 또는 워크플로우 생성 요청
 - 기존 프리셋 JSON을 다른 소스로 재생성
-- "프리셋 가져와", "워크플로우 만들어", "포맷 맞춰", "감정 그리드 만들어" 류의 표현 + 소스 자료 제시
+- "프리셋 가져와", "워크플로우 만들어", "포맷 맞춰", "감정 에셋 만들어" 류의 표현 + 소스 자료 제시
 
 ## 자산
 
 스킬 디렉토리:
 
 - **`lib/nai-to-sd.js`** — 검증된 NAI → SD 변환 함수 (`convertNAItoSD`). 소스가 NAI 문법이면 **반드시 이 모듈을 재사용**. 변환 로직 재구현 금지.
-- **`lib/generate_workflow.js`** — 프리셋 JSON을 받아 ComfyUI 일괄 워크플로우 JSON을 생성하는 CLI. **변경 금지**. CLI: `node lib/generate_workflow.js <preset.json> [out.json]`.
+- **`lib/generate_workflow.js`** — 프리셋 JSON을 받아 ComfyUI 감정 에셋 생성 워크플로우 JSON을 생성하는 CLI. **변경 금지**. CLI: `node lib/generate_workflow.js <preset.json> [out.json]`.
 - **`lib/workflow_prototype.json`** — generator의 베이스 (캐릭터 설정 + 1감정 서브그래프 템플릿 + Bypasser 1개). **변경 금지**.
 - **`examples/emotions_sample.json`** — 형식 학습용 데모 프리셋 (4감정).
 

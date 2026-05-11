@@ -1,6 +1,6 @@
 # Cream Saver — ComfyUI 커스텀 노드
 
-캐릭터 감정 에셋 일괄 생성 툴킷의 ComfyUI용 컴포넌트입니다. 이미지를 WebP 형식으로 저장할 때 편집용 워크플로우를 파일의 메타데이터(EXIF)에 함께 보관합니다. 이렇게 저장된 이미지를 ComfyUI 캔버스로 드래그 앤 드롭하면, 해당 이미지를 바로 편집할 수 있도록 기존 워크플로우(`Sampler_workflow.json` 기반)가 자동으로 복원됩니다.
+감정 에셋 일괄 생성 툴킷의 ComfyUI용 컴포넌트입니다. 이미지를 WebP 형식으로 저장할 때 편집용 워크플로우를 파일의 메타데이터(EXIF)에 함께 보관합니다. 이렇게 저장된 이미지를 ComfyUI 캔버스로 드래그앤드랍하면, 해당 이미지를 바로 편집할 수 있도록 기존 워크플로우(`Sampler_workflow.json` 기반)가 자동으로 복원됩니다.
 
 > 감정 에셋 일괄 생성 워크플로우를 생성하려면 같은 저장소의 [`emotion-workflow-builder`](../emotion-workflow-builder/) skill을 사용합니다.
 
@@ -8,8 +8,8 @@
 
 | 노드 | 역할 |
 |---|---|
-| **Cream Image Save with Context** | 이미지를 무손실 WebP 형식으로 저장할 때, `Sampler_workflow.json` 기반의 편집 워크플로우를 메타데이터에 포함시켜 저장합니다. |
-| **Context Cream** | `rgthree Context Big` 노드의 확장 버전입니다. `LORA_STACK` 필드를 추가하여 Cream Saver 노드의 입력을 더욱 간편하게 구성할 수 있습니다. |
+| **Cream Image Save with Context** | 이미지를 무손실 WebP 형식으로 저장할 때, `Sampler_workflow.json` 기반의 편집용 워크플로우를 메타데이터(EXIF)에 포함시켜 저장합니다. |
+| **Context Cream** | `rgthree-comfy`의 `Context Big (rgthree)` 노드에 `LORA_STACK` 포트를 추가한 노드입니다. 워크플로우 연결을 깔끔하게 정리해 줍니다. |
 
 ## 설치
 
@@ -67,9 +67,9 @@ echo.
 
 ### 이미지 저장 + 드래그앤드랍 복원
 
-1. ComfyUI에서 워크플로우를 실행합니다. (일괄 감정 그리드 워크플로우나 일반 워크플로우 모두 가능합니다.)
+1. ComfyUI에서 워크플로우를 실행합니다. (감정 에셋 생성 워크플로우나 일반 워크플로우 모두 가능합니다.)
 2. `Cream Image Save with Context` 노드에 출력된 결과물 중 마음에 드는 이미지를 우클릭하여 저장합니다.
-3. 저장한 WebP 파일을 ComfyUI 화면으로 드래그 앤 드롭하면, 해당 이미지를 생성했던 편집용 워크플로우가 즉시 복원됩니다.
+3. 저장한 WebP 파일을 ComfyUI 화면으로 드래그앤드랍하면, 해당 이미지를 생성했던 편집용 워크플로우가 즉시 복원됩니다.
 
 ## 폴더 구조
 
