@@ -1,0 +1,1977 @@
+{
+  "id": "ba3fc4b2-426d-48ff-aacf-9f9d7c630d3f",
+  "revision": 0,
+  "last_node_id": 25,
+  "last_link_id": 28,
+  "nodes": [
+    {
+      "id": 9,
+      "type": "Save Image 🔔ED",
+      "pos": [
+        50,
+        -270
+      ],
+      "size": [
+        520,
+        610
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "context_opt",
+          "shape": 7,
+          "type": "RGTHREE_CONTEXT",
+          "link": 14
+        },
+        {
+          "name": "image_opt",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "efficiency-nodes-ED",
+        "ver": "496cb53406df62c14c425d6b814afc99f5c8a31c",
+        "Node name for S&R": "Save Image 🔔ED",
+        "Play sound": true,
+        "Sound Volume": 0.9,
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "filename_prefix": true
+          },
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "%date:yyyy-MM-dd%/%date:MM-dd%"
+      ],
+      "color": "#322",
+      "bgcolor": "#533",
+      "shape": 1
+    },
+    {
+      "id": 10,
+      "type": "Ultimate SD Upscale 💬ED",
+      "pos": [
+        -290,
+        -290
+      ],
+      "size": [
+        320,
+        460
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "context",
+          "type": "RGTHREE_CONTEXT",
+          "link": 15
+        },
+        {
+          "name": "image_opt",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONTEXT",
+          "type": "RGTHREE_CONTEXT",
+          "links": [
+            14
+          ]
+        },
+        {
+          "name": "OUTPUT_IMAGE",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "SOURCE_IMAGE",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "efficiency-nodes-ED",
+        "ver": "86623f7ed94adace0a8604e41455d05c75eba158",
+        "Node name for S&R": "Ultimate SD Upscale 💬ED",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "set_seed_cfg_sampler": true,
+            "upscale_model": true,
+            "upscale_by": true,
+            "seed": true,
+            "steps": true,
+            "cfg": true,
+            "sampler_name": true,
+            "scheduler": true,
+            "denoise": true,
+            "mode_type": true,
+            "set_tile_size_from": true,
+            "tile_width": true,
+            "tile_height": true,
+            "mask_blur": true,
+            "tile_padding": true,
+            "seam_fix_mode": true,
+            "seam_fix_denoise": true,
+            "seam_fix_width": true,
+            "seam_fix_mask_blur": true,
+            "seam_fix_padding": true,
+            "force_uniform_tiles": true,
+            "tiled_decode": true
+          },
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "from context",
+        "2x-AnimeSharpV4_Fast_RCAN_PU.safetensors",
+        2,
+        16439285715217,
+        "randomize",
+        20,
+        5,
+        "euler",
+        "normal",
+        0.2,
+        "Linear",
+        "Canvas size",
+        2048,
+        2048,
+        8,
+        32,
+        "None",
+        1,
+        64,
+        8,
+        16,
+        true,
+        false
+      ],
+      "color": "#3c6446",
+      "bgcolor": "#285032",
+      "shape": 1
+    },
+    {
+      "id": 6,
+      "type": "Int Holder 💬ED",
+      "pos": [
+        1900,
+        -380
+      ],
+      "size": [
+        210,
+        90
+      ],
+      "flags": {
+        "collapsed": true,
+        "pinned": true
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "int_opt",
+          "shape": 7,
+          "type": "INT",
+          "link": 11
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            20
+          ]
+        }
+      ],
+      "title": "Steps [24]",
+      "properties": {
+        "cnr_id": "efficiency-nodes-ED",
+        "ver": "496cb53406df62c14c425d6b814afc99f5c8a31c",
+        "Node name for S&R": "Int Holder 💬ED",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "output_int": true
+          },
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        24
+      ],
+      "color": "#223",
+      "bgcolor": "#335",
+      "shape": 1
+    },
+    {
+      "id": 15,
+      "type": "Context Big (rgthree)",
+      "pos": [
+        2090,
+        -380
+      ],
+      "size": [
+        320,
+        470
+      ],
+      "flags": {
+        "collapsed": true,
+        "pinned": true
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "base_ctx",
+          "type": "RGTHREE_CONTEXT",
+          "link": 19
+        },
+        {
+          "dir": 3,
+          "name": "model",
+          "type": "MODEL",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "clip",
+          "type": "CLIP",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "vae",
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "latent",
+          "type": "LATENT",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "images",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "seed",
+          "type": "INT",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "steps",
+          "type": "INT",
+          "link": 20
+        },
+        {
+          "dir": 3,
+          "name": "step_refiner",
+          "type": "INT",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "cfg",
+          "type": "FLOAT",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "ckpt_name",
+          "type": [
+            "SD 1.5\\AOM3_Basil_mix.safetensors",
+            "SD 1.5\\Halolike3fp16.safetensors",
+            "SD 1.5\\MXCP0.4.safetensors",
+            "SD 1.5\\aZovyaPhotoreal_v2.safetensors",
+            "SD 1.5\\afroditexlNudePeople_20Bkdvae.safetensors",
+            "SD 1.5\\cyberrealistic_v41BackToBasics.safetensors",
+            "SD 1.5\\epicphotogasm_lastUnicorn.safetensors",
+            "SD 1.5\\flat2DAnimerge_v45Sharp.safetensors",
+            "SD 1.5\\gape60-fp16.ckpt",
+            "SD 1.5\\hardcoreAsianPorn_v11.safetensors",
+            "SD 1.5\\hassakuHentaiModel_v13.safetensors",
+            "SD 1.5\\henmixReal_v5c.safetensors",
+            "SD 1.5\\kimix_v10.safetensors",
+            "SD 1.5\\lazymixRealAmateur_v30a.safetensors",
+            "SD 1.5\\picxReal_10.safetensors",
+            "SD 1.5\\pornmasterPro_asianv2Fix.safetensors",
+            "SD 1.5\\pvcSTYLE_v10.safetensors",
+            "SD 1.5\\unstable_v10.safetensors",
+            "SDXL\\YamersRealisticNSFW_v5TX.safetensors",
+            "SDXL\\animagine-xl-3.1.safetensors",
+            "SDXL\\dreamshaperXL_v21TurboDPMSDE.safetensors",
+            "SDXL\\fitcordermix_fcturbosdxl.safetensors",
+            "SDXL\\hassakuXLSfwNsfw_betaV06.safetensors",
+            "SDXL\\juggernautXL_v9Rundiffusionphoto2.safetensors",
+            "SDXL\\miamodelSFWNSFW_v30.safetensors",
+            "SDXL\\ponyDiffusionV6XL_v6StartWithThisOne.safetensors",
+            "SDXL\\ponyDiffusionV6XL_v6TurboDPOMerge.safetensors",
+            "SDXL\\protovisionXL_V660Bakedvae.safetensors",
+            "SDXL\\sdXL_v10VAEFix.safetensors",
+            "SDXL\\socababesTurboXL_v12Hybrid.safetensors",
+            "SVD\\svd_xt.safetensors"
+          ],
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "sampler",
+          "type": [
+            "euler",
+            "euler_ancestral",
+            "heun",
+            "heunpp2",
+            "dpm_2",
+            "dpm_2_ancestral",
+            "lms",
+            "dpm_fast",
+            "dpm_adaptive",
+            "dpmpp_2s_ancestral",
+            "dpmpp_sde",
+            "dpmpp_sde_gpu",
+            "dpmpp_2m",
+            "dpmpp_2m_sde",
+            "dpmpp_2m_sde_gpu",
+            "dpmpp_3m_sde",
+            "dpmpp_3m_sde_gpu",
+            "ddpm",
+            "lcm",
+            "ddim",
+            "uni_pc",
+            "uni_pc_bh2"
+          ],
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "scheduler",
+          "type": [
+            "normal",
+            "karras",
+            "exponential",
+            "sgm_uniform",
+            "simple",
+            "ddim_uniform"
+          ],
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "clip_width",
+          "type": "INT",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "clip_height",
+          "type": "INT",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "text_pos_g",
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "text_pos_l",
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "text_neg_g",
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "text_neg_l",
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "mask",
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "control_net",
+          "type": "CONTROL_NET",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "dir": 4,
+          "name": "CONTEXT",
+          "shape": 3,
+          "type": "RGTHREE_CONTEXT",
+          "slot_index": 0,
+          "links": [
+            16
+          ]
+        },
+        {
+          "dir": 4,
+          "name": "MODEL",
+          "shape": 3,
+          "type": "MODEL",
+          "slot_index": 1,
+          "links": []
+        },
+        {
+          "dir": 4,
+          "name": "CLIP",
+          "shape": 3,
+          "type": "CLIP",
+          "slot_index": 2,
+          "links": []
+        },
+        {
+          "dir": 4,
+          "name": "VAE",
+          "shape": 3,
+          "type": "VAE",
+          "slot_index": 3,
+          "links": []
+        },
+        {
+          "dir": 4,
+          "name": "POSITIVE",
+          "shape": 3,
+          "type": "CONDITIONING",
+          "slot_index": 4,
+          "links": []
+        },
+        {
+          "dir": 4,
+          "name": "NEGATIVE",
+          "shape": 3,
+          "type": "CONDITIONING",
+          "slot_index": 5,
+          "links": []
+        },
+        {
+          "dir": 4,
+          "name": "LATENT",
+          "shape": 3,
+          "type": "LATENT",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "IMAGE",
+          "shape": 3,
+          "type": "IMAGE",
+          "slot_index": 7,
+          "links": []
+        },
+        {
+          "dir": 4,
+          "name": "SEED",
+          "shape": 3,
+          "type": "INT",
+          "slot_index": 8,
+          "links": []
+        },
+        {
+          "dir": 4,
+          "name": "STEPS",
+          "shape": 3,
+          "type": "INT",
+          "slot_index": 9,
+          "links": []
+        },
+        {
+          "dir": 4,
+          "name": "STEP_REFINER",
+          "shape": 3,
+          "type": "INT",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "CFG",
+          "shape": 3,
+          "type": "FLOAT",
+          "slot_index": 11,
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "CKPT_NAME",
+          "shape": 3,
+          "type": "COMBO",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "SAMPLER",
+          "shape": 3,
+          "type": "COMBO",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "SCHEDULER",
+          "shape": 3,
+          "type": "COMBO",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "CLIP_WIDTH",
+          "shape": 3,
+          "type": "INT",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "CLIP_HEIGHT",
+          "shape": 3,
+          "type": "INT",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "TEXT_POS_G",
+          "shape": 3,
+          "type": "STRING",
+          "slot_index": 17,
+          "links": []
+        },
+        {
+          "dir": 4,
+          "name": "TEXT_POS_L",
+          "shape": 3,
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "TEXT_NEG_G",
+          "shape": 3,
+          "type": "STRING",
+          "slot_index": 19,
+          "links": []
+        },
+        {
+          "dir": 4,
+          "name": "TEXT_NEG_L",
+          "shape": 3,
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "MASK",
+          "shape": 3,
+          "type": "MASK",
+          "slot_index": 21,
+          "links": []
+        },
+        {
+          "dir": 4,
+          "name": "CONTROL_NET",
+          "shape": 3,
+          "type": "CONTROL_NET",
+          "links": null
+        }
+      ],
+      "title": "Ctx",
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "32142fe476878a354dda6e2d4b5ea98960de3ced",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        },
+        "connections_layout": [
+          "Left",
+          "Right"
+        ]
+      },
+      "widgets_values": [],
+      "color": "#353535",
+      "bgcolor": "#212121"
+    },
+    {
+      "id": 2,
+      "type": "Load Image 💬ED",
+      "pos": [
+        600,
+        -260
+      ],
+      "size": [
+        460,
+        610
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            7
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            8
+          ]
+        },
+        {
+          "name": "PROMPT_TEXT",
+          "type": "STRING",
+          "slot_index": 2,
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "efficiency-nodes-ED",
+        "ver": "496cb53406df62c14c425d6b814afc99f5c8a31c",
+        "Node name for S&R": "Load Image 💬ED",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "image": true,
+            "upscale_method": true,
+            "width": true,
+            "height": true,
+            "keep_proportions": true,
+            "upload": true
+          },
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "example.png",
+        "🚫 Do not upscale",
+        1664,
+        2432,
+        "2x",
+        "image"
+      ],
+      "color": "#223",
+      "bgcolor": "#335",
+      "shape": 1
+    },
+    {
+      "id": 3,
+      "type": "Save Image 🔔ED",
+      "pos": [
+        1080,
+        -260
+      ],
+      "size": [
+        590,
+        610
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "context_opt",
+          "shape": 7,
+          "type": "RGTHREE_CONTEXT",
+          "link": null
+        },
+        {
+          "name": "image_opt",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 4
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "efficiency-nodes-ED",
+        "ver": "496cb53406df62c14c425d6b814afc99f5c8a31c",
+        "Node name for S&R": "Save Image 🔔ED",
+        "Play sound": true,
+        "Sound Volume": 0.9,
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "filename_prefix": true
+          },
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "%date:yyyy-MM-dd%/%date:MM-dd%"
+      ],
+      "color": "#322",
+      "bgcolor": "#533",
+      "shape": 1
+    },
+    {
+      "id": 18,
+      "type": "Simple Text 💬ED",
+      "pos": [
+        1690,
+        -870
+      ],
+      "size": [
+        570,
+        430
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text_a",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "slot_index": 0,
+          "links": [
+            10
+          ]
+        }
+      ],
+      "title": "Simple Text (Negative)",
+      "properties": {
+        "cnr_id": "efficiency-nodes-ED",
+        "ver": "496cb53406df62c14c425d6b814afc99f5c8a31c",
+        "Node name for S&R": "Simple Text 💬ED",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "text": true
+          },
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "[text_neg_g]"
+      ],
+      "color": "#323",
+      "bgcolor": "#535",
+      "shape": 2
+    },
+    {
+      "id": 4,
+      "type": "KSampler (Efficient) 💬ED",
+      "pos": [
+        1690,
+        -260
+      ],
+      "size": [
+        580,
+        610
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 8,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "context",
+          "type": "RGTHREE_CONTEXT",
+          "link": 5
+        },
+        {
+          "name": "positive_opt",
+          "shape": 7,
+          "type": "CONDITIONING",
+          "link": null
+        },
+        {
+          "name": "script",
+          "shape": 7,
+          "type": "SCRIPT",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONTEXT",
+          "type": "RGTHREE_CONTEXT",
+          "links": [
+            19
+          ]
+        },
+        {
+          "name": "OUTPUT_IMAGE",
+          "type": "IMAGE",
+          "links": [
+            4
+          ]
+        },
+        {
+          "name": "STEPS_INT",
+          "type": "INT",
+          "links": [
+            11
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "efficiency-nodes-ED",
+        "ver": "2055b61ede4dec0e83ed0f7cfa3e570b91abcd2e",
+        "Node name for S&R": "KSampler (Efficient) 💬ED",
+        "MaskDetailer mode": true,
+        "(MaskDetailer) drop size": 5,
+        "(MaskDetailer) cycle": 1,
+        "(MaskDetailer) inpaint model enable": false,
+        "(MaskDetailer) noise mask feather": 20,
+        "Use tiled VAE decode": false,
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "set_seed_cfg_sampler": true,
+            "seed": true,
+            "steps": true,
+            "cfg": true,
+            "sampler_name": true,
+            "scheduler": true,
+            "denoise": true,
+            "guide_size": true,
+            "guide_size_for": true,
+            "max_size": true,
+            "feather": true,
+            "crop_factor": true,
+            "preview_method": true
+          },
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "from context",
+        598151455079505,
+        "randomize",
+        24,
+        6,
+        "euler",
+        "karras",
+        0.5,
+        1024,
+        true,
+        1216,
+        15,
+        3,
+        "auto"
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 5,
+      "type": "Efficient Loader 💬ED",
+      "pos": [
+        598.7844259731369,
+        -873.0605642386708
+      ],
+      "size": [
+        460,
+        560
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "context_opt",
+          "shape": 7,
+          "type": "RGTHREE_CONTEXT",
+          "link": null
+        },
+        {
+          "name": "lora_stack",
+          "shape": 7,
+          "type": "LORA_STACK",
+          "link": 6
+        },
+        {
+          "name": "cnet_stack",
+          "shape": 7,
+          "type": "CONTROL_NET_STACK",
+          "link": null
+        },
+        {
+          "name": "pixels",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 7
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": 8
+        },
+        {
+          "name": "positive",
+          "shape": 7,
+          "type": "STRING",
+          "link": 9
+        },
+        {
+          "name": "negative",
+          "shape": 7,
+          "type": "STRING",
+          "link": 10
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONTEXT",
+          "type": "RGTHREE_CONTEXT",
+          "links": [
+            1
+          ]
+        },
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            28
+          ]
+        },
+        {
+          "name": "POSITIVE",
+          "type": "CONDITIONING",
+          "links": null
+        },
+        {
+          "name": "NEGATIVE",
+          "type": "CONDITIONING",
+          "links": null
+        },
+        {
+          "name": "LATENT",
+          "shape": 6,
+          "type": "LATENT",
+          "links": [
+            3
+          ]
+        },
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": null
+        },
+        {
+          "name": "DEPENDENCIES",
+          "type": "DEPENDENCIES",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "efficiency-nodes-ED",
+        "ver": "2055b61ede4dec0e83ed0f7cfa3e570b91abcd2e",
+        "Node name for S&R": "Efficient Loader 💬ED",
+        "Use Latent Rebatch": true,
+        "Token normalization": "none",
+        "Weight interpretation": "comfy",
+        "Use tiled VAE encode": false,
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "ckpt_name": true,
+            "vae_name": true,
+            "clip_skip": true,
+            "paint_mode": true,
+            "batch_size": true,
+            "seed": true,
+            "cfg": true,
+            "sampler_name": true,
+            "scheduler": true,
+            "image_width": true,
+            "image_height": true
+          },
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "🔌 ext model input",
+        "Baked VAE",
+        -2,
+        "🎨 Inpaint(MaskDetailer)",
+        1,
+        -1,
+        null,
+        6,
+        "euler",
+        "karras",
+        1024,
+        1024
+      ],
+      "color": "#223",
+      "bgcolor": "#335",
+      "shape": 1
+    },
+    {
+      "id": 11,
+      "type": "FaceDetailer 💬ED",
+      "pos": [
+        -660,
+        -290
+      ],
+      "size": [
+        360,
+        790
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "context",
+          "type": "RGTHREE_CONTEXT",
+          "link": 16
+        },
+        {
+          "name": "image_opt",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "wildcard",
+          "shape": 7,
+          "type": "STRING",
+          "link": 21
+        },
+        {
+          "name": "detailer_hook",
+          "shape": 7,
+          "type": "DETAILER_HOOK",
+          "link": null
+        },
+        {
+          "name": "scheduler_func_opt",
+          "shape": 7,
+          "type": "SCHEDULER_FUNC",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONTEXT",
+          "type": "RGTHREE_CONTEXT",
+          "links": [
+            15
+          ]
+        },
+        {
+          "name": "OUTPUT_IMAGE",
+          "type": "IMAGE",
+          "links": [
+            17
+          ]
+        },
+        {
+          "name": "CROPPED_REFINED",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "CROPPED_ALPHA",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            18
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "name": "CNET_IMAGES",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "efficiency-nodes-ED",
+        "ver": "219143c8d9e9ac3bda16052b953eec57dc030497",
+        "Node name for S&R": "FaceDetailer 💬ED",
+        "Use tiled VAE decode": false,
+        "cycle": 1,
+        "inpaint model": false,
+        "noise mask feather": 20,
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "set_seed_cfg_sampler": true,
+            "bbox_detector": true,
+            "segm_detector_opt": true,
+            "sam_model_opt": true,
+            "sam_mode": true,
+            "guide_size": true,
+            "guide_size_for": true,
+            "max_size": true,
+            "seed": true,
+            "steps": true,
+            "cfg": true,
+            "sampler_name": true,
+            "scheduler": true,
+            "denoise": true,
+            "feather": true,
+            "noise_mask": true,
+            "force_inpaint": true,
+            "bbox_threshold": true,
+            "bbox_dilation": true,
+            "bbox_crop_factor": true,
+            "sam_detection_hint": true,
+            "sam_dilation": true,
+            "sam_threshold": true,
+            "sam_bbox_expansion": true,
+            "sam_mask_hint_threshold": true,
+            "sam_mask_hint_use_negative": true,
+            "drop_size": true,
+            "cycle": true,
+            "inpaint_model": true,
+            "noise_mask_feather": true
+          },
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "from context",
+        "bbox/face_yolov8m.pt",
+        "None",
+        "sam_vit_b_01ec64.pth",
+        "AUTO",
+        512,
+        true,
+        1024,
+        1042233590471441,
+        "randomize",
+        20,
+        8,
+        "euler",
+        "normal",
+        0.5,
+        5,
+        true,
+        true,
+        0.5,
+        10,
+        3,
+        "center-1",
+        0,
+        0.93,
+        0,
+        0.7,
+        "False",
+        10
+      ],
+      "color": "#8c6446",
+      "bgcolor": "#785032",
+      "shape": 1
+    },
+    {
+      "id": 14,
+      "type": "Simple Text 💬ED",
+      "pos": [
+        -290,
+        390
+      ],
+      "size": [
+        330,
+        110
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text_a",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "slot_index": 0,
+          "links": [
+            21
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "efficiency-nodes-ED",
+        "ver": "496cb53406df62c14c425d6b814afc99f5c8a31c",
+        "Node name for S&R": "Simple Text 💬ED",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "text": true
+          },
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "[CONCAT][ASC]\n\nbeautiful-detailed eyes, (glittering eyes), [SEP]\n\n\n[SKIP][SEP]"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 12,
+      "type": "PreviewImage",
+      "pos": [
+        -290,
+        210
+      ],
+      "size": [
+        160,
+        130
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 17
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.18",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [],
+      "color": "#8c6446",
+      "bgcolor": "#785032"
+    },
+    {
+      "id": 13,
+      "type": "PreviewImage",
+      "pos": [
+        -120,
+        210
+      ],
+      "size": [
+        160,
+        130
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 18
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.18",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [],
+      "color": "#8c6446",
+      "bgcolor": "#785032"
+    },
+    {
+      "id": 17,
+      "type": "Fast Groups Bypasser (rgthree)",
+      "pos": [
+        320,
+        -480
+      ],
+      "size": [
+        250,
+        100
+      ],
+      "flags": {
+        "collapsed": false,
+        "pinned": true
+      },
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "OPT_CONNECTION",
+          "type": "*",
+          "slot_index": 0,
+          "links": []
+        }
+      ],
+      "title": "인페인트/업스케일",
+      "properties": {
+        "matchColors": "",
+        "matchTitle": "Ksampler|Hires",
+        "showNav": false,
+        "showAllGraphs": true,
+        "sort": "custom alphabet",
+        "customSortAlphabet": "k",
+        "toggleRestriction": "always one",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "color": "#461478",
+      "bgcolor": "#320064"
+    },
+    {
+      "id": 1,
+      "type": "Wildcard Encode 💬ED",
+      "pos": [
+        1690,
+        -380
+      ],
+      "size": [
+        190,
+        190
+      ],
+      "flags": {
+        "collapsed": true,
+        "pinned": true
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "context",
+          "type": "RGTHREE_CONTEXT",
+          "link": 1
+        },
+        {
+          "name": "model",
+          "shape": 7,
+          "type": "MODEL",
+          "link": 28
+        },
+        {
+          "name": "clip",
+          "shape": 7,
+          "type": "CLIP",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "positive",
+          "shape": 7,
+          "type": "CONDITIONING",
+          "link": null
+        },
+        {
+          "name": "negative",
+          "shape": 7,
+          "type": "CONDITIONING",
+          "link": null
+        },
+        {
+          "name": "latent",
+          "shape": 7,
+          "type": "LATENT",
+          "link": 3
+        },
+        {
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "signal",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONTEXT",
+          "type": "RGTHREE_CONTEXT",
+          "links": [
+            5
+          ]
+        },
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": null
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": null
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": null
+        },
+        {
+          "name": "POSITIVE",
+          "type": "CONDITIONING",
+          "links": []
+        },
+        {
+          "name": "NEGATIVE",
+          "type": "CONDITIONING",
+          "links": null
+        },
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": null
+        },
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "TEXT_POS",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "Wildcard Encode",
+      "properties": {
+        "cnr_id": "efficiency-nodes-ED",
+        "ver": "2055b61ede4dec0e83ed0f7cfa3e570b91abcd2e",
+        "Node name for S&R": "Wildcard Encode 💬ED",
+        "Turn on Apply Lora": false,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [],
+      "color": "#223",
+      "bgcolor": "#335",
+      "shape": 1
+    },
+    {
+      "id": 19,
+      "type": "Get Booru Tag 💬ED",
+      "pos": [
+        1080,
+        -870
+      ],
+      "size": [
+        590,
+        560
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text_a",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "text_c",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "efficiency-nodes-ED",
+        "ver": "2055b61ede4dec0e83ed0f7cfa3e570b91abcd2e",
+        "Node name for S&R": "Get Booru Tag 💬ED",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "url": true,
+            "text_b": true,
+            "Select to add Wildcard": true,
+            "Group tags by category": true
+          },
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "https://Danbooru.com",
+        "[text_pos_g]",
+        "Select the Wildcard to add to the text",
+        "Group tags by category"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 16,
+      "type": "LoRA Stacker 💬ED",
+      "pos": [
+        110,
+        -870
+      ],
+      "size": [
+        460,
+        160
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "lora_stack",
+          "shape": 7,
+          "type": "LORA_STACK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LORA_STACK",
+          "type": "LORA_STACK",
+          "links": [
+            6
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "efficiency-nodes-ED",
+        "ver": "2055b61ede4dec0e83ed0f7cfa3e570b91abcd2e",
+        "Node name for S&R": "LoRA Stacker 💬ED",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "input_mode": true,
+            "lora_count": true,
+            "lora_name_1": true,
+            "lora_wt_1": true,
+            "model_str_1": true,
+            "clip_str_1": true,
+            "lora_name_2": true,
+            "lora_wt_2": true,
+            "model_str_2": true,
+            "clip_str_2": true,
+            "lora_name_3": true,
+            "lora_wt_3": true,
+            "model_str_3": true,
+            "clip_str_3": true,
+            "lora_name_4": true,
+            "lora_wt_4": true,
+            "model_str_4": true,
+            "clip_str_4": true,
+            "lora_name_5": true,
+            "lora_wt_5": true,
+            "model_str_5": true,
+            "clip_str_5": true,
+            "lora_name_6": true,
+            "lora_wt_6": true,
+            "model_str_6": true,
+            "clip_str_6": true,
+            "lora_name_7": true,
+            "lora_wt_7": true,
+            "model_str_7": true,
+            "clip_str_7": true,
+            "lora_name_8": true,
+            "lora_wt_8": true,
+            "model_str_8": true,
+            "clip_str_8": true,
+            "lora_name_9": true,
+            "lora_wt_9": true,
+            "model_str_9": true,
+            "clip_str_9": true,
+            "lora_name_1_toggle": true,
+            "lora_name_2_toggle": true,
+            "lora_name_3_toggle": true,
+            "lora_name_4_toggle": true,
+            "lora_name_5_toggle": true,
+            "lora_name_6_toggle": true,
+            "lora_name_7_toggle": true,
+            "lora_name_8_toggle": true,
+            "lora_name_9_toggle": true,
+            "Clear LoRAs": true
+          },
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "simple",
+        1,
+        "None",
+        1,
+        1,
+        1,
+        "None",
+        1,
+        1,
+        1,
+        "None",
+        1,
+        1,
+        1,
+        "None",
+        1,
+        1,
+        1,
+        "None",
+        1,
+        1,
+        1,
+        "None",
+        1,
+        1,
+        1,
+        "None",
+        1,
+        1,
+        1,
+        "None",
+        1,
+        1,
+        1,
+        "None",
+        1,
+        1,
+        1,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        "Clear LoRAs"
+      ],
+      "color": "#223",
+      "bgcolor": "#335",
+      "shape": 1
+    }
+  ],
+  "links": [
+    [
+      1,
+      5,
+      0,
+      1,
+      0,
+      "RGTHREE_CONTEXT"
+    ],
+    [
+      3,
+      5,
+      4,
+      1,
+      6,
+      "LATENT"
+    ],
+    [
+      4,
+      4,
+      1,
+      3,
+      1,
+      "IMAGE"
+    ],
+    [
+      5,
+      1,
+      0,
+      4,
+      0,
+      "RGTHREE_CONTEXT"
+    ],
+    [
+      6,
+      16,
+      0,
+      5,
+      1,
+      "LORA_STACK"
+    ],
+    [
+      7,
+      2,
+      0,
+      5,
+      3,
+      "IMAGE"
+    ],
+    [
+      8,
+      2,
+      1,
+      5,
+      4,
+      "MASK"
+    ],
+    [
+      9,
+      19,
+      0,
+      5,
+      5,
+      "STRING"
+    ],
+    [
+      10,
+      18,
+      0,
+      5,
+      6,
+      "STRING"
+    ],
+    [
+      11,
+      4,
+      2,
+      6,
+      0,
+      "INT"
+    ],
+    [
+      14,
+      10,
+      0,
+      9,
+      0,
+      "RGTHREE_CONTEXT"
+    ],
+    [
+      15,
+      11,
+      0,
+      10,
+      0,
+      "RGTHREE_CONTEXT"
+    ],
+    [
+      16,
+      15,
+      0,
+      11,
+      0,
+      "RGTHREE_CONTEXT"
+    ],
+    [
+      17,
+      11,
+      1,
+      12,
+      0,
+      "IMAGE"
+    ],
+    [
+      18,
+      11,
+      3,
+      13,
+      0,
+      "IMAGE"
+    ],
+    [
+      19,
+      4,
+      0,
+      15,
+      0,
+      "RGTHREE_CONTEXT"
+    ],
+    [
+      20,
+      6,
+      0,
+      15,
+      9,
+      "INT"
+    ],
+    [
+      21,
+      14,
+      0,
+      11,
+      2,
+      "STRING"
+    ],
+    [
+      28,
+      5,
+      1,
+      1,
+      1,
+      "MODEL"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 9,
+      "title": "Mask Detailer",
+      "bounding": [
+        590,
+        -950,
+        1701.2155740268631,
+        1320.2605642386707
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 8,
+      "title": "KSampler",
+      "bounding": [
+        1680,
+        -330,
+        600,
+        693.6
+      ],
+      "color": "#8A8",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 10,
+      "title": "Hires-fix",
+      "bounding": [
+        -670,
+        -360,
+        1250,
+        873.6
+      ],
+      "color": "#b06634",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ue_links": [],
+    "ds": {
+      "scale": 0.8954302432552523,
+      "offset": [
+        1360.4220057367656,
+        652.8793158620036
+      ]
+    },
+    "frontendVersion": "1.42.15",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
