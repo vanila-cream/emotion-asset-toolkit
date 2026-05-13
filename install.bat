@@ -1,27 +1,26 @@
 @echo off
-chcp 65001 >nul
 setlocal
 
 REM ============================================================
-REM  emotion-asset-toolkit ì¼ê´„ ì„¤ì¹˜ ìŠ¤í¬ë¦½íŠ¸
-REM  ComfyUI ë£¨íŠ¸ í´ë”ì— ì´ íŒŒì¼ì„ ë„£ê³  ë”ë¸”í´ë¦­í•˜ì„¸ìš”.
+REM  emotion-asset-toolkit ÀÏ°ı ¼³Ä¡ ½ºÅ©¸³Æ®
+REM  ComfyUI ·çÆ® Æú´õ¿¡ ÀÌ ÆÄÀÏÀ» ³Ö°í ´õºíÅ¬¸¯ÇÏ¼¼¿ä.
 REM ============================================================
 
 if not exist "custom_nodes\" (
     echo.
-    echo [ERROR] ComfyUI ë£¨íŠ¸ í´ë”ì—ì„œ ì‹¤í–‰í•´ì•¼ í•©ë‹ˆë‹¤.
-    echo         'custom_nodes' í´ë”ë¥¼ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.
+    echo [ERROR] ComfyUI ·çÆ® Æú´õ¿¡¼­ ½ÇÇàÇØ¾ß ÇÕ´Ï´Ù.
+    echo         'custom_nodes' Æú´õ¸¦ Ã£À» ¼ö ¾ø½À´Ï´Ù.
     echo.
-    echo ì´ install.bat íŒŒì¼ì„ ComfyUI ë£¨íŠ¸ í´ë”
-    echo ^(ì˜ˆ: ComfyUI_windows_portable\ComfyUI\^) ì•ˆì— ë„£ê³ 
-    echo ë‹¤ì‹œ ë”ë¸”í´ë¦­í•´ ì£¼ì„¸ìš”.
+    echo ÀÌ install.bat ÆÄÀÏÀ» ComfyUI ·çÆ® Æú´õ
+    echo ^(¿¹: ComfyUI_windows_portable\ComfyUI\^) ¾È¿¡ ³Ö°í
+    echo ´Ù½Ã ´õºíÅ¬¸¯ÇØ ÁÖ¼¼¿ä.
     echo.
     pause
     exit /b 1
 )
 
 echo.
-echo [1/2] ì»¤ìŠ¤í…€ ë…¸ë“œ ì„¤ì¹˜ ì¤‘...
+echo [1/2] Ä¿½ºÅÒ ³ëµå ¼³Ä¡ Áß...
 echo.
 
 cd custom_nodes
@@ -31,37 +30,37 @@ if not exist "cream-saver\" (
     move emotion-asset-toolkit\cream-saver .\cream-saver >nul
     rmdir /s /q emotion-asset-toolkit
 ) else (
-    echo [SKIP] cream-saver ì´ë¯¸ ì„¤ì¹˜ë¨
+    echo [SKIP] cream-saver ÀÌ¹Ì ¼³Ä¡µÊ
 )
 
 if not exist "efficiency-nodes-comfyui\" (
     git clone https://github.com/jags111/efficiency-nodes-comfyui
 ) else (
-    echo [SKIP] efficiency-nodes-comfyui ì´ë¯¸ ì„¤ì¹˜ë¨
+    echo [SKIP] efficiency-nodes-comfyui ÀÌ¹Ì ¼³Ä¡µÊ
 )
 
 if not exist "efficiency-nodes-ED\" (
     git clone https://github.com/NyaamZ/efficiency-nodes-ED
 ) else (
-    echo [SKIP] efficiency-nodes-ED ì´ë¯¸ ì„¤ì¹˜ë¨
+    echo [SKIP] efficiency-nodes-ED ÀÌ¹Ì ¼³Ä¡µÊ
 )
 
 if not exist "rgthree-comfy\" (
     git clone https://github.com/rgthree/rgthree-comfy
 ) else (
-    echo [SKIP] rgthree-comfy ì´ë¯¸ ì„¤ì¹˜ë¨
+    echo [SKIP] rgthree-comfy ÀÌ¹Ì ¼³Ä¡µÊ
 )
 
 if not exist "ComfyUI-Impact-Pack\" (
     git clone https://github.com/ltdrdata/ComfyUI-Impact-Pack
 ) else (
-    echo [SKIP] ComfyUI-Impact-Pack ì´ë¯¸ ì„¤ì¹˜ë¨
+    echo [SKIP] ComfyUI-Impact-Pack ÀÌ¹Ì ¼³Ä¡µÊ
 )
 
 cd ..
 
 echo.
-echo [2/2] ëª¨ë¸ ë‹¤ìš´ë¡œë“œ ì¤‘...
+echo [2/2] ¸ğµ¨ ´Ù¿î·Îµå Áß...
 echo.
 
 mkdir models\upscale_models 2>nul
@@ -71,25 +70,25 @@ mkdir models\sams 2>nul
 if not exist "models\upscale_models\2x-AnimeSharpV4_Fast_RCAN_PU.safetensors" (
     curl -L -o models\upscale_models\2x-AnimeSharpV4_Fast_RCAN_PU.safetensors "https://huggingface.co/Kim2091/2x-AnimeSharpV4/resolve/main/2x-AnimeSharpV4_Fast_RCAN_PU.safetensors"
 ) else (
-    echo [SKIP] 2x-AnimeSharpV4_Fast_RCAN_PU.safetensors ì´ë¯¸ ì¡´ì¬
+    echo [SKIP] 2x-AnimeSharpV4_Fast_RCAN_PU.safetensors ÀÌ¹Ì Á¸Àç
 )
 
 if not exist "models\ultralytics\bbox\face_yolov8m.pt" (
     curl -L -o models\ultralytics\bbox\face_yolov8m.pt "https://huggingface.co/datasets/Gourieff/ReActor/resolve/main/models/detection/bbox/face_yolov8m.pt"
 ) else (
-    echo [SKIP] face_yolov8m.pt ì´ë¯¸ ì¡´ì¬
+    echo [SKIP] face_yolov8m.pt ÀÌ¹Ì Á¸Àç
 )
 
 if not exist "models\sams\sam_vit_b_01ec64.pth" (
     curl -L -o models\sams\sam_vit_b_01ec64.pth "https://huggingface.co/datasets/Gourieff/ReActor/resolve/main/models/sams/sam_vit_b_01ec64.pth"
 ) else (
-    echo [SKIP] sam_vit_b_01ec64.pth ì´ë¯¸ ì¡´ì¬
+    echo [SKIP] sam_vit_b_01ec64.pth ÀÌ¹Ì Á¸Àç
 )
 
 echo.
 echo ============================================================
-echo  [ì™„ë£Œ] ëª¨ë“  ì»¤ìŠ¤í…€ ë…¸ë“œì™€ ëª¨ë¸ ì„¤ì¹˜ê°€ ëë‚¬ìŠµë‹ˆë‹¤.
-echo         ComfyUIë¥¼ ì¬ì‹œì‘í•´ ì£¼ì„¸ìš”.
+echo  [¿Ï·á] ¸ğµç Ä¿½ºÅÒ ³ëµå¿Í ¸ğµ¨ ¼³Ä¡°¡ ³¡³µ½À´Ï´Ù.
+echo         ComfyUI¸¦ Àç½ÃÀÛÇØ ÁÖ¼¼¿ä.
 echo ============================================================
 echo.
 pause
