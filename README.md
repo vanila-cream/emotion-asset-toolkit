@@ -20,7 +20,7 @@ ComfyUI에서 감정 에셋을 일괄 생성하기 위한 도구입니다. Comfy
 
 ## 설치
 
-세부 사항은 각 문서를 참고하세요:
+ComfyUI 노드와 의존 패키지는 [`install.bat`](https://github.com/vanila-cream/emotion-asset-toolkit/releases/download/v1.0/install.bat)을 ComfyUI 루트 폴더에 넣고 더블클릭하면 일괄 설치됩니다. 세부 사항은 각 문서를 참고하세요:
 
 - [`cream-saver/README.md`](./cream-saver/README.md) — ComfyUI 노드 + 의존 노드 설치
 - [`emotion-workflow-builder/SKILL.md`](./emotion-workflow-builder/SKILL.md) — 스킬 발동 조건 및 변환 절차

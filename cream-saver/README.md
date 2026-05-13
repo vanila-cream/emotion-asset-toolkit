@@ -34,9 +34,13 @@
 | [`face_yolov8m.pt`](https://huggingface.co/datasets/Gourieff/ReActor/blob/main/models/detection/bbox/face_yolov8m.pt) | `ComfyUI/models/ultralytics/bbox/` | FaceDetailer 얼굴 검출 |
 | [`sam_vit_b_01ec64.pth`](https://huggingface.co/datasets/Gourieff/ReActor/blob/main/models/sams/sam_vit_b_01ec64.pth) | `ComfyUI/models/sams/` | FaceDetailer SAM 마스크 |
 
-### 일괄 설치 명령어
+### 일괄 설치 (간편 방법)
 
-위 커스텀 노드와 모델을 한 번에 다운로드하는 명령어입니다. ComfyUI 루트 폴더에서 cmd 터미널을 열고 아래 명령어를 통째로 붙여넣어 실행하세요.
+위 커스텀 노드와 모델을 한 번에 설치해 주는 [`install.bat`](https://github.com/vanila-cream/emotion-asset-toolkit/releases/download/v1.0/install.bat)을 받아 **ComfyUI 루트 폴더**(`custom_nodes` 폴더가 있는 위치)에 넣고 더블클릭하면 끝납니다. git과 curl이 필요합니다(최신 Windows 10/11 기본 포함).
+
+### 일괄 설치 (수동, cmd 사용)
+
+`.bat` 실행이 꺼려진다면 동일한 내용의 명령어를 직접 실행해도 됩니다. ComfyUI 루트 폴더에서 cmd 터미널을 열고 아래 명령어를 통째로 붙여넣어 실행하세요.
 
 ```cmd
 if not exist custom_nodes\ (echo. & echo [ERROR] ComfyUI 루트 폴더에서 실행해야 합니다. 'custom_nodes' 폴더를 찾을 수 없습니다. & echo.) else (
